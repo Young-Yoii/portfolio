@@ -8,7 +8,7 @@ import ChennelIcon from './components/ChennelIcon';
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <GlobalStyle />
       <Transition />
       <ChennelIcon />
