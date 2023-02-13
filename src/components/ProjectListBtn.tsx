@@ -13,7 +13,11 @@ const ListButton = ({ list }: Props) => {
   return (
     <ListWrapInner>
       {list.map((item, index) => {
-        return <li key={index}>{item.title}</li>;
+        return (
+          <li key={index} className="cursor-pointer">
+            {item.title}
+          </li>
+        );
       })}
     </ListWrapInner>
   );

@@ -5,13 +5,12 @@ import ProjectIntro from '../components/ProjectIntro';
 const Wrapper = styled.div`
   position: absolute;
   width: 100%;
-  height: 100%;
   overflow-y: auto;
   overflow-x: hidden;
   background: linear-gradient(#dee3eb, #fe6c47);
 `;
 
-const Project = () => {
+const ProjectList = () => {
   return (
     <Wrapper>
       <Header project={true} />
@@ -20,4 +19,4 @@ const Project = () => {
   );
 };
 
-export default Project;
+export default ProjectList;

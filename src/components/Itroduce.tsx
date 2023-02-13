@@ -1,12 +1,10 @@
 import styled from 'styled-components';
-import { ArrowItem } from './IntroItems';
 
 const Wrapper = styled.div`
   background: linear-gradient(#dfe2eb, #bffad0, #93fcb1, #000);
   box-sizing: border-box;
   color: #000;
   padding: 6vh 6vw 11vh 6vw;
-  // display: flex;
   justify-content: space-between;
   align-items: center;
   @media screen and (max-width: 1440px) {
@@ -24,19 +22,10 @@ const Title = styled.div`
     font-size: 3rem;
   }
 `;
-const Arrow = styled(ArrowItem)`
-  transform: rotate(270deg);
-  background-color: #000;
-  width: 2px;
-  &::after,
-  &::before {
-    background-color: #000;
-    height: 2px;
-  }
-`;
 const Contents = styled.div`
   font-size: 1.6rem;
-  font-family: 'Noto Sans KR';
+  line-height: 2.6rem;
+  font-family: 'Pretendard-Regular';
   span {
     font-size: 2rem;
     font-weight: 600;

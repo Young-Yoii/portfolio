@@ -5,9 +5,6 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
   }
-  :root {
-    --main-color: #f3e99f;
-  }
   html, body { 
     font-size: 62.5%;
     height: 100%;

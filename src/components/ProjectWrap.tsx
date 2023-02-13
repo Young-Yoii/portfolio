@@ -4,21 +4,15 @@ import ReactPlayer from 'react-player/lazy';
 import { AiFillGithub } from 'react-icons/ai';
 import { BsLink45Deg } from 'react-icons/bs';
 import Parser from 'html-react-parser';
-import { ArrowItem } from './IntroItems';
-// import ListButton from './ProjectListBtn';
-import ProjectIntro from './ProjectIntro';
 
 const Wrapper = styled.div`
   padding: 6vh 6vw;
   background-color: #000;
   color: #fff;
-  @media screen and (max-width: 1024px) {
-    padding: 3vh 6vw;
-  }
 `;
 const Title = styled.p`
   font-size: 4rem;
-  font-family: 'Montserrat-Black';
+  font-family: 'Montserrat-Black', 'Pretendard-Black';
   padding-bottom: 7vh;
   @media screen and (max-width: 1024px) {
     font-size: 3.5rem;
@@ -35,19 +29,12 @@ const WrapperInner = styled.div`
     flex-direction: column;
   }
 `;
-const ProjectTitle = styled.div`
+const ProjectImage = styled.div`
   width: 50%;
+  height: 100%;
   img {
     width: 100%;
     border: 1px solid #000;
-  }
-  .item-title {
-    font-size: 1.6rem;
-    font-weight: 600;
-  }
-  .item-date {
-    font-size: 1.4rem;
-    padding-bottom: 10px;
   }
   @media screen and (max-width: 1024px) {
     width: 100%;
@@ -64,12 +51,15 @@ const ProjectTitle = styled.div`
 `;
 const PlayerWrap = styled.div`
   width: 100%;
-  height: 100%;
+  height: 100vh;
 `;
 const ProjectDescription = styled.div`
   width: 50%;
   padding-left: 50px;
   box-sizing: border-box;
+
+  font-family: 'Pretendard-Regular';
+  line-height: 2.3rem;
   @media screen and (max-width: 1024px) {
     padding-left: 0px;
     width: 100%;
@@ -93,21 +83,19 @@ const ProjectInfoWrap = styled.div`
   }
 `;
 const ProjectDescWrap = styled.ul`
-  padding: 8px 0px 0px 20px;
+  padding: 8px 0px 20px 20px;
   li {
     font-size: 1.6rem;
     color: #d4d1d1;
     list-style: circle;
   }
 `;
-
 const ProjectUrl = styled.div`
   display: flex;
   align-items: center;
-  font-family: 'Noto Sans KR';
-  font-size: 2rem;
-  padding-top: 20px;
-  width: 20vw;
+  font-family: 'Pretendard-Regular';
+  font-size: 1.8rem;
+  width: 30vw;
   a {
     color: #fff;
     padding: 0px 0px 5px 4px;
@@ -123,12 +111,30 @@ const ProjectUrl = styled.div`
     width: 50vw;
   }
 `;
-
-const Arrow = styled(ArrowItem)`
-  transform: rotate(270deg);
+const ArrowItem = styled.div`
+  width: 1px;
   height: 50px;
+  background-color: #fff;
+  position: relative;
+  transform: rotate(270deg);
+  &::after,
+  &::before {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 1px;
+    background-color: #fff;
+    transform-origin: 0 100%;
+    bottom: 0;
+    left: 2px;
+  }
+  &::after {
+    transform: rotate(225deg);
+  }
+  &::before {
+    transform: rotate(315deg);
+  }
 `;
-
 interface Props {
   project: {
     id: number;
@@ -174,7 +180,7 @@ const ProjectWrap = ({ project }: Props) => {
     <Wrapper>
       <Title>{project.title}</Title>
       <WrapperInner>
-        <ProjectTitle>
+        <ProjectImage>
           {project.image ? (
             <img src={process.env.PUBLIC_URL + project.image} alt={project.title} />
           ) : (
@@ -182,7 +188,7 @@ const ProjectWrap = ({ project }: Props) => {
               <ReactPlayer className="react-player" url={`${project.video}`} width={'100%'} height={'100%'} playing={false} muted={true} controls={true} light={false} />
             </PlayerWrap>
           )}
-        </ProjectTitle>
+        </ProjectImage>
         <ProjectDescription>
           {info.map((item, index) => (
             <ProjectInfoWrap key={index}>
@@ -206,7 +212,7 @@ const ProjectWrap = ({ project }: Props) => {
               {item.url === '' ? null : (
                 <ProjectUrl key={index}>
                   {item.icon}
-                  <Arrow />
+                  <ArrowItem />
                   <a href={item.url} target="_blank" rel="noreferrer" className="cursor-pointer">
                     {item.title}
                   </a>

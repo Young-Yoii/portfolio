@@ -10,10 +10,14 @@ import { IoLogoCss3 } from 'react-icons/io';
 import styled from 'styled-components';
 
 const Wrapper = styled.div`
-  padding: 6vh 6vw;
   color: #fff;
+  padding: 6vh 6vw;
+  font-size: 1.6rem;
+  font-family: 'Pretendard-Regular';
+  line-height: 2.4rem;
   .title {
     font-size: 3rem;
+    font-family: 'Montserrat-Black';
     font-weight: bold;
     @media screen and (max-width: 767px) {
       font-size: 2rem;

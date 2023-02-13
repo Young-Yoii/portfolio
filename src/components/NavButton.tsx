@@ -6,7 +6,6 @@ const NavItem = styled(Link)`
   border: none;
   margin-right: 20px;
   font-size: 2rem;
-  font-family: 'Montserrat-Black';
   @media screen and (max-width: 768px) {
     font-size: 1.6rem;
   }

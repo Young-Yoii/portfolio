@@ -1,4 +1,4 @@
-import styled, { keyframes, css } from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 const Wrapper = styled.div`
   position: relative;
@@ -15,7 +15,6 @@ const ItemWrapper = styled.div`
   width: 100%;
   height: 100%;
 `;
-const ItemWrapperInner = styled.div``;
 const TextItem = styled.div`
   font-size: 2rem;
   display: inline-block;
@@ -36,7 +35,7 @@ const ScrollArrowAnimate = keyframes`
   height: 30vh;
 }
 `;
-export const ArrowItem = styled.div`
+const ArrowItem = styled.div`
   width: 1px;
   height: 30vh;
   background-color: #fff;
@@ -187,7 +186,7 @@ const Item = styled.div`
     --pixelTranslate: -14.2rem;
     animation-delay: 4.5s;
   }
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: 1440px) {
     span {
       font-size: 3rem;
     }
@@ -276,7 +275,7 @@ const BallItem = styled.div`
     box-shadow: 0px 0px 20px #5bff6b;
     animation-delay: 4s;
   }
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: 1440px) {
     width: 40px;
     height: 40px;
     &.ball-first {

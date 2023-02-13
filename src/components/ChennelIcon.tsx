@@ -1,9 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { VscGithubAlt, VscMail, VscBook } from 'react-icons/vsc';
-import { Link, useLocation } from 'react-router-dom';
-import { ArrowItem } from './IntroItems';
+import { VscGithubAlt, VscMail } from 'react-icons/vsc';
+import { Link } from 'react-router-dom';
 
 /* Component Style */
 const Wrapper = styled.article`
@@ -30,7 +29,7 @@ const LinkItem = styled.li`
     color: #fff;
     text-decoration: none;
     &:hover svg {
-      fill: #085afa;
+      fill: #8f3eff;
     }
   }
   svg {
@@ -55,14 +54,10 @@ const Bar = styled.span`
   }
 `;
 
-const LinkListPanel = () => {
-  const location = useLocation();
-  const pathname = location.pathname;
-
+const ChennelIcon = () => {
   return (
     <Wrapper>
       <Bar></Bar>
-      {/* style={pathname === '/about' ? { top: '20px' } : { bottom: '20px' }} */}
       <LinkList>
         <LinkItem>
           <a href="https://yoii-devlog.tistory.com/" target="_blank" rel="noreferrer" className="cursor-pointer">
@@ -96,4 +91,4 @@ const LinkListPanel = () => {
   );
 };
 
-export default LinkListPanel;
+export default ChennelIcon;
