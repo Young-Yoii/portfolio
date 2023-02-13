@@ -102,8 +102,8 @@ export const personalProjectList: project[] = [
     title: '포트폴리오 ver.1',
     image: '/images/portfolio.png',
     video: null,
-    github: 'https://github.com/Young-Yoii/2023-portfolio',
-    url: 'https://young-yoii.github.io/2023-portfolio/',
+    github: 'https://github.com/Young-Yoii/portfolio-ver1',
+    url: 'https://young-yoii.github.io/portfolio-ver1/',
     date: '2023.02.01 - 2022.02.05',
     overview:
       '프로젝트를 소개하기 위해 만든 첫 번째 포트폴리오 입니다.\n제작 후 프로젝트에 관한 설명과 포트폴리오 기능으로서의 부족함을 느껴 리팩토링을 진행하려다,\n하나의 결과물로 남겨두고 싶어 Portfolio ver1 이라는 타이틀을 달았습니다.',
