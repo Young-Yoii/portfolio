@@ -31,7 +31,6 @@ const WrapperInner = styled.div`
 `;
 const ProjectImage = styled.div`
   width: 50%;
-  height: 100%;
   img {
     width: 100%;
     border: 1px solid #000;
@@ -51,7 +50,7 @@ const ProjectImage = styled.div`
 `;
 const PlayerWrap = styled.div`
   width: 100%;
-  height: 100vh;
+  height: 100%;
 `;
 const ProjectDescription = styled.div`
   width: 50%;
