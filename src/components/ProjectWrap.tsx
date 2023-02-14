@@ -6,9 +6,12 @@ import { BsLink45Deg } from 'react-icons/bs';
 import Parser from 'html-react-parser';
 
 const Wrapper = styled.div`
-  padding: 6vh 6vw;
+  padding: 12vh 6vw;
   background-color: #000;
   color: #fff;
+  @media screen and (max-width: 1024px) {
+    padding: 6vh 6vw;
+  }
 `;
 const Title = styled.p`
   font-size: 4rem;
@@ -30,17 +33,21 @@ const WrapperInner = styled.div`
   }
 `;
 const ProjectImage = styled.div`
-  width: 50%;
+  width: 55%;
   img {
     width: 100%;
     border: 1px solid #000;
   }
+  @media screen and (max-width: 1440px) {
+    width: 50%;
+  }
   @media screen and (max-width: 1024px) {
     width: 100%;
     padding-bottom: 20px;
+    height: 40vh;
   }
   @media screen and (max-width: 767px) {
-    width: 100%;
+    height: 20vh;
     .item-wrap {
       display: flex;
       justify-content: space-between;
@@ -53,12 +60,15 @@ const PlayerWrap = styled.div`
   height: 100%;
 `;
 const ProjectDescription = styled.div`
-  width: 50%;
+  width: 45%;
   padding-left: 50px;
   box-sizing: border-box;
 
   font-family: 'Pretendard-Regular';
   line-height: 2.3rem;
+  @media screen and (max-width: 1440px) {
+    width: 50%;
+  }
   @media screen and (max-width: 1024px) {
     padding-left: 0px;
     width: 100%;

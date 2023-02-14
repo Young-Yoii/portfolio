@@ -6,8 +6,11 @@ import { teamProjectList, personalProjectList, publishingProjectList } from '../
 const Wrapper = styled.div`
   position: absolute;
   width: 100%;
-  overflow-y: auto;
+  height: 100%;
   overflow-x: hidden;
+  &::-webkit-scrollbar {
+    display: none;
+  }
   background: #000;
 `;
 

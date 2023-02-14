@@ -7,8 +7,7 @@ import Skills from '../components/Skills';
 const Wrapper = styled.div`
   position: absolute;
   width: 100%;
-  overflow-y: auto;
-  overflow-x: hidden;
+  overflow: hidden auto;
   background: #000;
 `;
 

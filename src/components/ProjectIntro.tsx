@@ -5,11 +5,13 @@ import ListButton from './ProjectListBtn';
 import { Nadoddam, MergeCake } from '../pages/Projects';
 
 const Wrapper = styled.div`
-  padding: 6vh 6vw;
+  padding: 12vh 6vw;
   color: #000;
-  justify-content: space-between;
   font-size: 1.6rem;
   font-family: 'Pretendard-Regular';
+  @media screen and (max-width: 1024px) {
+    padding: 6vh 6vw;
+  }
 `;
 const Title = styled.div`
   font-size: 5rem;

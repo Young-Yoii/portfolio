@@ -5,8 +5,11 @@ import ProjectIntro from '../components/ProjectIntro';
 const Wrapper = styled.div`
   position: absolute;
   width: 100%;
-  overflow-y: auto;
+  height: 100%;
   overflow-x: hidden;
+  &::-webkit-scrollbar {
+    display: none;
+  }
   background: linear-gradient(#dee3eb, #fe6c47);
 `;
 
