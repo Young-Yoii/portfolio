@@ -3,6 +3,7 @@ import ReactPlayer from 'react-player/lazy';
 import { AiFillGithub } from 'react-icons/ai';
 import { BsLink45Deg } from 'react-icons/bs';
 
+/* Component Style */
 const Wrapper = styled.div`
   width: 70%;
   padding: 6vh 0;
@@ -126,6 +127,7 @@ const ProjectUrl = styled.div`
   }
 `;
 
+/* Props interface */
 interface Props {
   project: {
     id: number;

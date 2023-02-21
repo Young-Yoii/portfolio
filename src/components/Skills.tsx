@@ -6,9 +6,9 @@ import { FaNode } from 'react-icons/fa';
 import { BiGitBranch } from 'react-icons/bi';
 import { DiPhotoshop } from 'react-icons/di';
 import { IoLogoCss3 } from 'react-icons/io';
-
 import styled from 'styled-components';
 
+/* Component Style */
 const Wrapper = styled.div`
   padding: 3vh 0;
   width: 70%;

@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { project } from '../db';
 import { Link } from 'react-router-dom';
 
+/* Component Style */
 const Wrapper = styled.div`
   width: 70%;
   margin: 0 auto;
@@ -59,7 +60,6 @@ const ItemWrapper = styled(Link)`
     }
   }
 `;
-
 const ImageWrapper = styled.div`
   width: 400px;
   height: 250px;
@@ -75,7 +75,6 @@ const ImageWrapper = styled.div`
     width: auto;
   }
 `;
-
 const ContetnsWrapper = styled.div`
   padding: 10px;
   box-sizing: border-box;
