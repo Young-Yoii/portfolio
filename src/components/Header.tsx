@@ -1,6 +1,7 @@
 import styled, { css } from 'styled-components';
 import NavButton from './NavButton';
 
+/* Component Style */
 const Wrapper = styled.div<{ project: boolean }>`
   background-color: #5bff6b;
   width: 100%;
@@ -25,6 +26,7 @@ const NavWrapper = styled.ul`
   }
 `;
 
+/* Props Interface */
 interface Props {
   project: boolean;
 }

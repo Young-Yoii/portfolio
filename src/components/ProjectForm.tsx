@@ -24,13 +24,12 @@ const Title = styled.p`
     padding-bottom: 3vh;
   }
 `;
-
 const ContentsWrap = styled.div`
   display: flex;
   justify-content: space-between;
   width: 100%;
   margin-bottom: 30px;
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: 767px) {
     flex-direction: column;
   }
 `;
@@ -48,17 +47,9 @@ const ContentItem = styled.div`
     font-size: 1.4rem;
     padding-bottom: 5px;
   }
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: 767px) {
     width: 100%;
     padding-bottom: 20px;
-  }
-  @media screen and (max-width: 767px) {
-    height: 20vh;
-    .item-wrap {
-      display: flex;
-      justify-content: space-between;
-      padding: 20px 0px;
-    }
   }
 `;
 const PlayerWrap = styled.div`
@@ -76,6 +67,7 @@ const DescriptionWrap = styled.div`
   width: 100%;
   box-sizing: border-box;
   font-family: 'Pretendard-Regular';
+  font-size: 1.6rem;
   line-height: 2.3rem;
   .item-title {
     font-size: 1.8rem;
@@ -91,7 +83,6 @@ const DescriptionWrap = styled.div`
 const Info = styled.div`
   padding: 10px 0px;
   .item-content {
-    font-size: 1.6rem;
     padding: 10px 0px;
   }
 `;
@@ -115,26 +106,23 @@ const Stack = styled.div`
   li {
     margin: 5px 20px 0px 0px;
     padding: 5px;
-    font-size: 1.6rem;
     background-color: rgba(0, 0, 0, 0.18);
     border-radius: 10px;
   }
 `;
+const UrlWrap = styled.div`
+  padding-bottom: 20px;
+`;
 const ProjectUrl = styled.div`
   display: flex;
   align-items: center;
-  font-family: 'Pretendard-Regular';
-  font-size: 1.6rem;
-  a {
-    padding: 0px 0px 5px 4px;
-  }
+  padding-bottom: 5px;
+  font-size: 1.8rem;
+  font-weight: bold;
   svg {
     border: 1px solid #fff;
     border-radius: 50%;
-    padding: 10px;
-  }
-  @media screen and (max-width: 767px) {
-    width: 50vw;
+    padding-right: 5px;
   }
 `;
 
@@ -186,18 +174,20 @@ const ProjectWrap = ({ project }: Props) => {
         </ContentItem>
       </ContentsWrap>
       <DescriptionWrap>
-        {url.map((item, index) => (
-          <>
-            {item.url === '' ? null : (
-              <ProjectUrl key={index}>
-                {item.icon}
-                <a href={item.url} target="_blank" rel="noreferrer" className="cursor-pointer">
-                  {item.title}
-                </a>
-              </ProjectUrl>
-            )}
-          </>
-        ))}
+        <UrlWrap>
+          {url.map((item, index) => (
+            <>
+              {item.url === '' ? null : (
+                <ProjectUrl key={index}>
+                  {item.icon}
+                  <a href={item.url} target="_blank" rel="noreferrer" className="cursor-pointer">
+                    {item.title}
+                  </a>
+                </ProjectUrl>
+              )}
+            </>
+          ))}
+        </UrlWrap>
         {info.map((item, index) => (
           <>
             {item.content === 'null' ? null : (

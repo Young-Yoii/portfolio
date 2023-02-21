@@ -1,15 +1,14 @@
 import styled from 'styled-components';
 
+/* Component Style */
 const Wrapper = styled.div`
   box-sizing: border-box;
   padding: 6vh 0;
   width: 70%;
   margin: 0 auto;
-  @media screen and (max-width: 1440px) {
-    padding: 6vh 0 0 0;
-  }
   @media screen and (max-width: 1240px) {
     width: 85%;
+    padding-bottom: 0;
   }
 `;
 const Title = styled.div`
@@ -30,6 +29,12 @@ const ImgWrapper = styled.div`
   }
   @media screen and (max-width: 1440px) {
     width: 40%;
+  }
+  @media screen and (max-width: 1024px) {
+    width: 50%;
+  }
+  @media screen and (max-width: 767px) {
+    width: 70%;
   }
 `;
 const Contents = styled.div`

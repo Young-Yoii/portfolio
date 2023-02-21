@@ -17,7 +17,7 @@ const Wrapper = styled.div`
   font-family: 'Pretendard-Regular';
   line-height: 2.4rem;
   .title {
-    padding: 10px;
+    padding: 10px 0px;
     border-bottom: 2px solid rgba(0, 0, 0, 0.18);
     font-size: 2.2rem;
     font-family: 'Montserrat-Black';
@@ -26,9 +26,8 @@ const Wrapper = styled.div`
     width: 85%;
   }
 `;
-
 const SkillListWrap = styled.div`
-  margin: 20px 10px;
+  margin: 20px 0px;
   p {
     font-size: 1.8rem;
     font-weight: 600;

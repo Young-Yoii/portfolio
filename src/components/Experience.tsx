@@ -1,6 +1,7 @@
 import { experiece } from '../db';
 import styled from 'styled-components';
 
+/* Component Style */
 const Wrapper = styled.div`
   padding: 3vh 0;
   width: 70%;
@@ -9,7 +10,7 @@ const Wrapper = styled.div`
   font-family: 'Pretendard-Regular';
   line-height: 2.4rem;
   .title {
-    padding: 10px;
+    padding: 10px 0px;
     border-bottom: 2px solid rgba(0, 0, 0, 0.18);
     font-size: 2.2rem;
     font-family: 'Montserrat-Black';
@@ -18,7 +19,7 @@ const Wrapper = styled.div`
     width: 85%;
 `;
 const List = styled.ul`
-  margin: 10px 10px;
+  margin: 10px 0px;
 `;
 const ListItem = styled.li`
   padding-top: 20px;
