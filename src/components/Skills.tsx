@@ -10,23 +10,25 @@ import { IoLogoCss3 } from 'react-icons/io';
 import styled from 'styled-components';
 
 const Wrapper = styled.div`
-  color: #fff;
-  padding: 6vh 6vw;
+  padding: 3vh 0;
+  width: 70%;
+  margin: 0 auto;
   font-size: 1.6rem;
   font-family: 'Pretendard-Regular';
   line-height: 2.4rem;
   .title {
-    font-size: 3rem;
+    padding: 10px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.18);
+    font-size: 2.2rem;
     font-family: 'Montserrat-Black';
-    font-weight: bold;
-    @media screen and (max-width: 767px) {
-      font-size: 2rem;
-    }
+  }
+  @media screen and (max-width: 767px) {
+    width: 85%;
   }
 `;
 
 const SkillListWrap = styled.div`
-  padding-top: 20px;
+  margin: 20px 10px;
   p {
     font-size: 1.8rem;
     font-weight: 600;
@@ -37,7 +39,7 @@ const SkillList = styled.ul`
   flex-wrap: wrap;
 `;
 const SkillItem = styled.li`
-  border: 1px solid #fff;
+  border: 1px solid #000;
   display: flex;
   align-items: center;
   font-size: 1.4rem;
@@ -47,7 +49,6 @@ const SkillItem = styled.li`
     width: 20px;
     height: 20px;
     display: inline-block;
-    fill: #fff;
   }
   span {
     padding-left: 5px;

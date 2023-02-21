@@ -1,17 +1,12 @@
 import styled from 'styled-components';
 import Header from '../components/Header';
-import ProjectWrap from '../components/ProjectWrap';
-import { teamProjectList, personalProjectList, publishingProjectList } from '../db';
+import ProjectForm from '../components/ProjectForm';
+import { project } from '../db';
 
 const Wrapper = styled.div`
   position: absolute;
   width: 100%;
-  height: 100%;
   overflow-x: hidden;
-  &::-webkit-scrollbar {
-    display: none;
-  }
-  background: #000;
 `;
 
 //memo : team project
@@ -19,7 +14,7 @@ export const MergeCake = () => {
   return (
     <Wrapper>
       <Header project={true} />
-      <ProjectWrap project={teamProjectList[0]} />
+      <ProjectForm project={project[3]} />
     </Wrapper>
   );
 };
@@ -28,7 +23,7 @@ export const Nadoddam = () => {
   return (
     <Wrapper>
       <Header project={true} />
-      <ProjectWrap project={teamProjectList[1]} />
+      <ProjectForm project={project[1]} />
     </Wrapper>
   );
 };
@@ -38,7 +33,7 @@ export const Yflix = () => {
   return (
     <Wrapper>
       <Header project={true} />
-      <ProjectWrap project={personalProjectList[0]} />
+      <ProjectForm project={project[2]} />
     </Wrapper>
   );
 };
@@ -46,15 +41,7 @@ export const Thumbnail = () => {
   return (
     <Wrapper>
       <Header project={true} />
-      <ProjectWrap project={personalProjectList[1]} />
-    </Wrapper>
-  );
-};
-export const Portfolio = () => {
-  return (
-    <Wrapper>
-      <Header project={true} />
-      <ProjectWrap project={personalProjectList[2]} />
+      <ProjectForm project={project[0]} />
     </Wrapper>
   );
 };
@@ -64,7 +51,7 @@ export const Blend = () => {
   return (
     <Wrapper>
       <Header project={true} />
-      <ProjectWrap project={publishingProjectList[0]} />
+      <ProjectForm project={project[4]} />
     </Wrapper>
   );
 };
@@ -72,7 +59,7 @@ export const Sunset = () => {
   return (
     <Wrapper>
       <Header project={true} />
-      <ProjectWrap project={publishingProjectList[1]} />
+      <ProjectForm project={project[5]} />
     </Wrapper>
   );
 };

@@ -8,9 +8,6 @@ const GlobalStyle = createGlobalStyle`
   html, body { 
     font-size: 62.5%;
     height: 100%;
-    &::-webkit-scrollbar {
-      display: none;
-    }
   }
   ul, li {
     list-style: none;

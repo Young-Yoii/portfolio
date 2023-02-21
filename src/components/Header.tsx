@@ -8,7 +8,6 @@ const Wrapper = styled.div<{ project: boolean }>`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 6vw;
   font-family: 'Montserrat-Black';
 
   ${(props) =>
@@ -19,10 +18,10 @@ const Wrapper = styled.div<{ project: boolean }>`
 `;
 const NavWrapper = styled.ul`
   display: flex;
-  .clicked {
-    button {
-      color: var(--main-color);
-    }
+  width: 70%;
+  margin: 0 auto;
+  @media screen and (max-width: 1024px) {
+    width: 85%;
   }
 `;
 
@@ -31,7 +30,7 @@ interface Props {
 }
 
 const Header = ({ project }: Props) => {
-  const nav = [{ title: <NavButton link="/" title="Home" /> }, { title: <NavButton link="/about" title="About" /> }, { title: <NavButton link="/project" title="Project" /> }];
+  const nav = [{ title: <NavButton link="/" title="About" /> }, { title: <NavButton link="/project" title="Project" /> }];
 
   return (
     <Wrapper project={project}>

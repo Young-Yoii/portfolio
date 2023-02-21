@@ -8,7 +8,6 @@ const Wrapper = styled.div`
   position: absolute;
   width: 100%;
   overflow: hidden auto;
-  background: #000;
 `;
 
 const About = () => {

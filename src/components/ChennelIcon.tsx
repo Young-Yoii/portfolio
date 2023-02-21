@@ -26,7 +26,7 @@ const LinkItem = styled.li`
   height: 3.3vh;
   margin-bottom: 17px;
   a {
-    color: #fff;
+    color: #000;
     text-decoration: none;
     &:hover svg {
       fill: #8f3eff;
@@ -35,7 +35,6 @@ const LinkItem = styled.li`
   svg {
     width: 100%;
     height: 100%;
-    fill: #fff;
   }
   @media screen and (max-width: 1024px) {
     width: 25px;
@@ -47,7 +46,7 @@ const Bar = styled.span`
   display: block;
   width: 0.1vw;
   height: 8vh;
-  background-color: #fff;
+  background-color: #000;
   margin: 0px auto 15px;
   @media screen and (max-width: 1024px) {
     width: 1px;
