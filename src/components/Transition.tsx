@@ -13,12 +13,12 @@ const Transition = () => {
         <Routes location={location}>
           <Route path="/" element={<About />} />
           <Route path="/projects" element={<ProjectList />} />
-          <Route path="/projects/mergecake" element={<MergeCake />} />
-          <Route path="/projects/nadoddam" element={<Nadoddam />} />
-          <Route path="/projects/yflix" element={<Yflix />} />
-          <Route path="/projects/thumbnail" element={<Thumbnail />} />
-          <Route path="/projects/blend" element={<Blend />} />
-          <Route path="/projects/sunsetbeer" element={<Sunset />} />
+          <Route path="/project/mergecake" element={<MergeCake />} />
+          <Route path="/project/nadoddam" element={<Nadoddam />} />
+          <Route path="/project/yflix" element={<Yflix />} />
+          <Route path="/project/thumbnail" element={<Thumbnail />} />
+          <Route path="/project/blend" element={<Blend />} />
+          <Route path="/project/sunsetbeer" element={<Sunset />} />
         </Routes>
       </CSSTransition>
     </TransitionGroup>
