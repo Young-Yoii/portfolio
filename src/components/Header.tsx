@@ -32,7 +32,7 @@ interface Props {
 }
 
 const Header = ({ project }: Props) => {
-  const nav = [{ title: <NavButton link="/" title="About" /> }, { title: <NavButton link="/project" title="Project" /> }];
+  const nav = [{ title: <NavButton link="/" title="About" /> }, { title: <NavButton link="/projects" title="Projects" /> }];
 
   return (
     <Wrapper project={project}>
