@@ -3,7 +3,7 @@ import styled from 'styled-components';
 /* Component Style */
 const Wrapper = styled.div`
   box-sizing: border-box;
-  padding: 6vh 0;
+  padding: 3vh 0;
   width: 70%;
   margin: 0 auto;
   @media screen and (max-width: 1240px) {
@@ -24,7 +24,6 @@ const ImgWrapper = styled.div`
   img {
     width: 100%;
     height: 100%;
-    border-radius: 50%;
     object-fit: cover;
   }
   @media screen and (max-width: 1440px) {
@@ -41,10 +40,9 @@ const Contents = styled.div`
   font-size: 1.6rem;
   line-height: 2.6rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   font-family: 'Pretendard-Regular';
-  padding-bottom: 30px;
 
   span {
     font-size: 2rem;
@@ -61,10 +59,17 @@ const Contents = styled.div`
 `;
 const ContentsInner = styled.div`
   padding: 40px;
-  border-radius: 20px;
-  border: 1px solid rgba(0, 0, 0, 0.18);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18);
   margin-left: 50px;
+
+  a {
+    font-weight: 600; 
+    color:gray;
+    &:hover {
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+  }
+
   @media screen and (max-width: 1024px) {
     margin: 20px 0px 0px 0px;
   }
@@ -85,15 +90,13 @@ const Introduce = () => {
           <img src={process.env.PUBLIC_URL + '/images/profile.jpg'} alt="프로필사진"></img>
         </ImgWrapper>
         <ContentsInner>
-          <p>
-            <span>"안녕하세요. 좋은 코드를 위해 고민하고 노력하는 조가영입니다."</span> <br />
-            <br />
-            2021년 처음 웹을 접하고 발전을 위해 지금까지 열심히 달려왔습니다. <br />
-            꾸준히 배우며 성장하는 것을 좋아하며 부족한 지식들을 하루하루 채우며 노력하고 있습니다. <br />
-            현재는 JavaScript, TypeScript, React 를 계속해서 공부하고 있으며, <br />
-            코드의 재 사용성을 높일 수 있는 코드 작성 방법과 함께 좋은 코드가 무엇인지 고민하고 공부하고 있습니다. <br />
-            빠르게 변하는 웹 개발 트렌드 속에서 사용자 경험을 고려하며 성실하게 성장하는 프론트엔드 개발자가 되겠습니다.
-          </p>
+            <span>조가영 </span> 웹 개발자 (FE_퍼블리셔)<br /><br />
+            함께 하는 팀원들과 원활한 소통을 통해 하나의 프로젝트를 만들어갑니다. <br/>
+            사용자 관점에서 개발하는 프론트엔드 개발자 입니다.<br /><br />
+            <span>Contact</span><br /><br />
+            Phone. 010.4751.2313<br />
+            Email. fhqht4545@gmail.com<br />
+            Notion PF. <a href='https://inky-sprite-6cd.notion.site/1c8818d952b942ecae19838462d675a6' target='_blank' rel="noreferrer noopener">🔗 바로가기 →</a>
         </ContentsInner>
       </Contents>
     </Wrapper>

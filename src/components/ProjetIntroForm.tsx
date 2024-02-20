@@ -3,12 +3,18 @@ import { project } from '../db';
 import { Link } from 'react-router-dom';
 import { useState, useRef, useEffect } from 'react';
 import ReactPlayer from 'react-player/lazy';
+import throttle from 'throttle';
 
 /* Component Style */
 const Wrapper = styled.div`
   width: 70%;
   margin: 0 auto;
-  padding: 6vh 0;
+  padding: 3vh 0;
+  .title {
+    padding: 10px 0px;
+    font-size: 2.2rem;
+    font-family: 'Montserrat-Black';
+  }
   @media screen and (max-width: 1240px) {
     width: 85%;
   }
@@ -20,53 +26,39 @@ const WrapperInner = styled.div`
   justify-content: space-between;
   font-family: 'Pretendard-Regular';
   overflow: hidden;
-  width: 1300px;
+  width: 100%;
   box-sizing: border-box;
   border-radius: 10px;
   border: 1px solid rgba(0, 0, 0, 0.18);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18);
   transition: all 0.5s;
-  @media screen and (max-width: 940px) {
-    justify-content: center;
-  }
-`;
-const Title = styled.div`
-  font-size: 5rem;
-  font-family: 'Montserrat-Black';
-  padding-bottom: 6vh;
-  @media screen and (max-width: 767px) {
-    font-size: 3rem;
-  }
 `;
 const Item = styled.ul`
   display: flex;
 `
 const ItemWrapper = styled.li`
   padding: 40px 70px;
-  width: 1300px;
+  width: ${props => props.property}px;
   display: grid;
   grid-template-columns: 45%;
   grid-column-gap: 20px;
   box-sizing: border-box;
 
-  .item-title {
-    font-size: 1.6rem;
-    padding-bottom: 5px;
-    grid-column: 1 / 3;
-    font-weight: bold;
+  @media screen and (max-width: 1199px) {
+    display: flex;
+    flex-direction: column;
   }
-  .item-date {
-    font-size: 1.4rem;
-    color: gray;
-    margin: 3px 0;
-    font-weight: 500;
+  @media screen and (max-width: 640px) {
+    padding: 20px 10px;
   }
+
   .item-member {
     font-size: 1.6rem;
     padding: 2px 5px;
     border-radius: 5px;
     background-color: #fe6c473d;
-    margin-right: 5px;
+    margin: 0 5px 5px 0;
+    display: inline-block;
     &.team {
       background-color: #5bff6b66;
     }
@@ -78,8 +70,13 @@ const MideaWrapper = styled.div`
   justify-content: space-between;
   border-bottom: 1px solid gray;
   grid-column: 2;
-  @media screen and (max-width: 767px) {
-    width: auto;
+  
+  @media screen and (max-width: 1199px) {
+    margin-top: 30px;
+    height: 350px;
+  }
+  @media screen and (max-width: 640px) {
+    height: auto;
   }
 `;
 const ContetnsWrapper = styled.div`
@@ -88,7 +85,7 @@ const ContetnsWrapper = styled.div`
   font-size: 1.5rem;
   .tit {
     font-weight: 600;
-    margin: 10px 0 5px 0;}
+    margin: 20px 0 5px 0;
   }
 `;
 const LinkWrap = styled.div`
@@ -155,18 +152,23 @@ const PageNation = styled.div`
   .bold {font-weight: bold;}
 `
 
-interface StackProps {
-  stack: any[];
+interface ListProps{
+  list?: string[];
+  stack?: string[];
+  name?: string;
 }
+
 const ProjectIntroForm = () => {
   const cloneItem = [project[project.length - 1], ...project, project[0]];
   const lastItem = cloneItem.length - 1;
   const slideRef = useRef<HTMLUListElement>(null);
+  const itemRef = useRef<HTMLDivElement>(null);
   const [currentSlide, setCurrentSlide] = useState<number>(0);
   const [realIndex, setRealIndex] = useState<number>(1);
   const [carouselTransition, setCarouselTransition] = useState('transform 500ms ease-in-out');
-  const IMG_SIZE = 1300;
-
+  const [width, setWidth] = useState<any>(null);
+  const IMG_SIZE = 1316;
+  console.log( )
   const roofSlide = (currentSlide: number) => {
     setTimeout(() => {
       setCurrentSlide(currentSlide);
@@ -185,7 +187,7 @@ const ProjectIntroForm = () => {
   }
   useEffect(() => {
     if(slideRef.current !==null){
-      slideRef.current.style.transform = `translateX(-${IMG_SIZE * currentSlide}px)`;
+      slideRef.current.style.transform = `translateX(-${width * currentSlide}px)`;
       slideRef.current.style.transition = `${carouselTransition}`;
     }
   }, [handleSlide]);
@@ -197,37 +199,37 @@ const ProjectIntroForm = () => {
     }
   }, [lastItem, currentSlide])
 
+  useEffect(() => {
+    const handleResize = () => {
+      setWidth(itemRef.current !==null && itemRef.current.offsetWidth);
+    };
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    }
+  }, []);
+
   return (
     <Wrapper>
-      <Title>Projects</Title>
-      <WrapperInner>
+     <p className="title">Projects</p>
+      <WrapperInner ref={itemRef}>
         <Item ref={slideRef}>
         {cloneItem.map((item, index) => (
-          <ItemWrapper key={index}>
+          <ItemWrapper key={index} property={width}>
               <ContetnsWrapper>
                 <div className="item-title">
                   <span className={'item-member' + (item.category === '팀 프로젝트' ? ' team' : '')}>{item.category}</span>
                   {item.title}
+                  <p className="item-date">{item.overview}</p>
                   <p className="item-date">{item.date} ｜ {item.members}</p>
                     <LinkWrap>
-                      <a href={`${item.github}`} target="_blank" rel="noreferrer">🔗 github.com →</a>
-                      {item.url && (
-                        <a href={item.url} rel="noreferrer">🔗 서비스 URL →</a>
-                      )}
+                      <a href={item.github} target="_blank" rel="noreferrer">🔗 github.com →</a>
+                      {item.url && <a href={item.url} rel="noreferrer">🔗 서비스 URL →</a>}
                     </LinkWrap>
                 </div>
-                <p className="tit">기여한 부분</p>
-                <ul className='list'>
-                  {item.description.map((item, index) => {
-                    return <li key={index}>✔️ {item}</li>;
-                  })}
-                </ul>
-                <p className="tit">느낀 점</p>
-                <ul className='list'>
-                  {item.review.map((item, index) => {
-                    return <li key={index}>👩‍💻 {item}</li>;
-                  })}
-                </ul>
+                <ReviewList list={item.description} name="description"/>
+                <ReviewList list={item.review} name="review"/>
                 <Stack stack={item.stack} />
               </ContetnsWrapper>
               <MideaWrapper>
@@ -244,12 +246,25 @@ const ProjectIntroForm = () => {
   );
 };
 
-const Stack = ({ stack }: StackProps) => {
+const ReviewList = ({list , name}: ListProps) => {
+  return (
+    <>
+     <p className="tit">{name === 'review' ? '느낀 점' : '기여한 부분'}</p>
+      <ul className='list'>
+      {list && list.map((item, index) => (
+        <li key={index}>{name === 'review' ? '👩‍💻' : '✔️'} {item}</li>
+      ))}
+     </ul>
+    </>
+  )
+}
+
+const Stack = ({ stack }: ListProps) => {
   return (
     <>
       <p className="tit">기술스택</p>
       <StackItem>
-        {stack.map((item, index) => (
+        {stack && stack.map((item, index) => (
           <span key={index}>{item}&nbsp;&nbsp;</span>
         ))}
       </StackItem>

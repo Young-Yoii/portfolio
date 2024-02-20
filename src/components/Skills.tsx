@@ -3,7 +3,7 @@ import { GrReactjs } from 'react-icons/gr';
 import { IoLogoJavascript } from 'react-icons/io';
 import { SiRedux, SiExpress, SiFigma, SiTypescript, SiMongodb, SiNotion } from 'react-icons/si';
 import { FaNode } from 'react-icons/fa';
-import { BiGitBranch } from 'react-icons/bi';
+import { BiGitBranch } from "react-icons/bi";
 import { DiPhotoshop } from 'react-icons/di';
 import { IoLogoCss3 } from 'react-icons/io';
 import styled from 'styled-components';

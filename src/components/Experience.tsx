@@ -3,9 +3,8 @@ import styled from 'styled-components';
 
 /* Component Style */
 const Wrapper = styled.div`
-  padding: 3vh 0;
   width: 70%;
-  margin: 0 auto;
+  margin: 3vh auto;
   font-size: 1.6rem;
   font-family: 'Pretendard-Regular';
   line-height: 2.4rem;
@@ -24,21 +23,14 @@ const List = styled.ul`
 const ListItem = styled.li`
   padding-top: 20px;
   .item-title {
-    font-weight: 600;
-  }
-  .item-date {
-    font-size: 1.4rem;
-    color: gray;
-  }
-  .item-desc {
-    color: gray;
+    padding-bottom: 0;
   }
 `;
 
 const Experience = () => {
   return (
     <Wrapper>
-      <p className="title">Experience</p>
+      <p className="title">Career</p>
       <List>
         {experiece.map((item, index) => (
           <ListItem key={index}>

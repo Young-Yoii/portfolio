@@ -38,6 +38,19 @@ const GlobalStyle = createGlobalStyle`
     opacity: 0;
     transition: all 1s ease-in;
   }
+
+  .item-title {
+    font-size: 1.6rem;
+    padding-bottom: 5px;
+    font-weight: bold;
+  }
+
+  .item-date {
+    font-size: 1.4rem;
+    color: gray;
+    margin: 3px 0;
+    font-weight: 500;
+  }
 `;
 
 export default GlobalStyle;
