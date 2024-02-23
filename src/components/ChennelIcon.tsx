@@ -13,6 +13,9 @@ const Wrapper = styled.article`
   @media screen and (max-width: 1024px) {
     right: 20px;
   }
+  @media screen and (max-width: 640px) {
+    right: 10px;
+  }
 `;
 
 const LinkList = styled.ul`

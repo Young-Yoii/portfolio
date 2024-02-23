@@ -90,7 +90,7 @@ const Introduce = () => {
           <img src={process.env.PUBLIC_URL + '/images/profile.jpg'} alt="프로필사진"></img>
         </ImgWrapper>
         <ContentsInner>
-            <span>조가영 </span> 웹 개발자 (FE_퍼블리셔)<br /><br />
+            <span>조가영 </span> 웹 개발자 (FrontEnd/퍼블리셔)<br /><br />
             함께 하는 팀원들과 원활한 소통을 통해 하나의 프로젝트를 만들어갑니다. <br/>
             사용자 관점에서 개발하는 프론트엔드 개발자 입니다.<br /><br />
             <span>Contact</span><br /><br />
