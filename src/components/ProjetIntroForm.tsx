@@ -47,7 +47,7 @@ const ItemWrapper = styled.li`
     flex-direction: column;
   }
   @media screen and (max-width: 640px) {
-    padding: 20px 10px 40px;
+    padding: 20px 20px 40px;
   }
 
   .item-member {

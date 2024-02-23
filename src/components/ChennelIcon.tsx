@@ -11,10 +11,11 @@ const Wrapper = styled.article`
   right: 30px;
   z-index: 900;
   @media screen and (max-width: 1024px) {
-    right: 20px;
-  }
-  @media screen and (max-width: 640px) {
     right: 10px;
+  }
+  @media screen and (max-width: 768px) {
+    right: 6px;
+    bottom: 0;
   }
 `;
 
@@ -42,6 +43,10 @@ const LinkItem = styled.li`
   @media screen and (max-width: 1024px) {
     width: 25px;
     height: 25px;
+  }
+  @media screen and (max-width: 768px) {
+    width: 20px;
+    height: 20px;
   }
 `;
 
