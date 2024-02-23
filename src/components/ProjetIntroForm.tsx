@@ -1,9 +1,7 @@
 import styled from 'styled-components';
 import { project } from '../db';
-import { Link } from 'react-router-dom';
 import { useState, useRef, useEffect } from 'react';
 import ReactPlayer from 'react-player/lazy';
-import throttle from 'throttle';
 
 /* Component Style */
 const Wrapper = styled.div`
@@ -49,7 +47,7 @@ const ItemWrapper = styled.li`
     flex-direction: column;
   }
   @media screen and (max-width: 640px) {
-    padding: 20px 10px;
+    padding: 20px 10px 40px;
   }
 
   .item-member {
@@ -76,7 +74,7 @@ const MideaWrapper = styled.div`
     height: 350px;
   }
   @media screen and (max-width: 640px) {
-    height: auto;
+    height: 200px;
   }
 `;
 const ContetnsWrapper = styled.div`
@@ -135,6 +133,17 @@ const NavBtn = styled.button`
   }
   & + button::after {
     transform: rotate(-45deg) translate(-25%, -25%)
+  }
+
+  @media screen and (max-width: 640px) {
+    width: 30px;
+    height: 30px;
+    margin: 0;
+    top: auto;
+    bottom: 5px;
+    left: 5px;
+    &::after {width: 10px; height:10px;}
+    & + button {right: auto; left: 40px;}
   }
 `
 const PageNation = styled.div`

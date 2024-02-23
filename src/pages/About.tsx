@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import Experience from '../components/Experience';
-import Header from '../components/Header';
 import Introduce from '../components/Itroduce';
 import Skills from '../components/Skills';
 import ProjectIntroForm from '../components/ProjetIntroForm';

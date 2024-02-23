@@ -1,7 +1,6 @@
 import React from 'react';
 import './font.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Transition from './components/Transition';
 import GlobalStyle from './GlobalStyle';
 import ChennelIcon from './components/ChennelIcon';
 import About from './pages/About';
