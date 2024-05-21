@@ -94,7 +94,7 @@ const Introduce = () => {
             함께 하는 팀원들과 원활한 소통을 통해 하나의 프로젝트를 만들어갑니다. <br/>
             사용자 관점에서 개발하는 프론트엔드 개발자 입니다.<br /><br />
             <span>Contact</span><br /><br />
-            Phone. 010.4751.2313<br />
+            Phone. 010.8176.0213<br />
             Email. fhqht4545@gmail.com<br />
             Notion PF. <a href='https://inky-sprite-6cd.notion.site/1c8818d952b942ecae19838462d675a6' target='_blank' rel="noreferrer noopener">🔗 바로가기 →</a>
         </ContentsInner>
