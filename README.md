@@ -1,8 +1,9 @@
-## 2023 front-end portfolio
+## front-end portfolio
 ### 🚀 [Portfolio Link](https://young-yoii.github.io/portfolio/)
 
 #### ✅ 제작 기간 <br />
 2023.02.11 ~ 2023.02.13
+추가 수정 2024.02.29
 
 #### ✅ 사용한 스킬 및 라이브러리
 <div>
