@@ -87,7 +87,7 @@ const Introduce = () => {
       <Title>About Me</Title>
       <Contents>
         <ImgWrapper>
-          <img src={process.env.PUBLIC_URL + '/images/profile.jpg'} alt="프로필사진"></img>
+          <img src={process.env.PUBLIC_URL + '/images/profile2.jpg'} alt="프로필사진"></img>
         </ImgWrapper>
         <ContentsInner>
             <span>조가영 </span> 웹 개발자 (FrontEnd/퍼블리셔)<br /><br />

@@ -198,7 +198,7 @@ export const experiece: experiecetype[] = [
   {
     id: 1,
     title: '제스아이앤씨',
-    date: '2023.04.03 - 현재',
+    date: '2023.04.03 - 2024.02.29',
     description: '웹사이트 프론트 개발 및 퍼블리싱',
   },
   {
