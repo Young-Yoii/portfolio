@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.80f0aa12.css",
-    "main.js": "/portfolio/static/js/main.35fbb911.js",
+    "main.js": "/portfolio/static/js/main.d3f3c297.js",
     "reactPlayerYouTube.js": "/portfolio/static/js/reactPlayerYouTube.ecbb33aa.chunk.js",
     "reactPlayerSoundCloud.js": "/portfolio/static/js/reactPlayerSoundCloud.de89cf2e.chunk.js",
     "reactPlayerVimeo.js": "/portfolio/static/js/reactPlayerVimeo.4761b041.chunk.js",
@@ -21,7 +21,7 @@
     "static/media/Montserrat-Black.ttf": "/portfolio/static/media/Montserrat-Black.08437fd0aa82576d3678.ttf",
     "index.html": "/portfolio/index.html",
     "main.80f0aa12.css.map": "/portfolio/static/css/main.80f0aa12.css.map",
-    "main.35fbb911.js.map": "/portfolio/static/js/main.35fbb911.js.map",
+    "main.d3f3c297.js.map": "/portfolio/static/js/main.d3f3c297.js.map",
     "reactPlayerYouTube.ecbb33aa.chunk.js.map": "/portfolio/static/js/reactPlayerYouTube.ecbb33aa.chunk.js.map",
     "reactPlayerSoundCloud.de89cf2e.chunk.js.map": "/portfolio/static/js/reactPlayerSoundCloud.de89cf2e.chunk.js.map",
     "reactPlayerVimeo.4761b041.chunk.js.map": "/portfolio/static/js/reactPlayerVimeo.4761b041.chunk.js.map",
@@ -39,6 +39,6 @@
   },
   "entrypoints": [
     "static/css/main.80f0aa12.css",
-    "static/js/main.35fbb911.js"
+    "static/js/main.d3f3c297.js"
   ]
 }
