@@ -55,7 +55,7 @@ export const works: workType[] = [
     title: '경상남도 교육청 통합누리집 개편 ',
     overview: '경상남도 교육청 및 통합누리집(37개 패밀리사이트)개편 | 기획팀, 백엔드, 디자이너 협업',
     image: '/images/gne.png',
-    date: '2023.06.12 ~2024.02.26',
+    date: '2023.06.12 - 2024.02.26',
     role: '프론트엔드(퍼블리싱)',
     description: [
       '사용자 화면 JSP 기반 프론트 개발',
